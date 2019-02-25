@@ -25,8 +25,6 @@ ElasticSearch 두 번째 튜토리얼을 기술합니다.
          4 : start hq plugin
 #########################################
 
-[ec2-user@ip-xxx-xxx-xxx-xxx ES-Tutorial-2]$ ./tuto2 1
-
 ```
 
 ## ELK Tutorial 2 - Head / HQ Plugin 설치 및 시작
@@ -37,23 +35,12 @@ ElasticSearch 두 번째 튜토리얼을 기술합니다.
 * 9100 포트로 실행됨
 
 ```bash
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install git
+[ec2-user@ip-xxx-xxx-xxx-xxx ES-Tutorial-2]$ ./tuto2 1
 
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install bzip2 epel-release
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install npm
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ cd /usr/local/
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo git clone https://github.com/mobz/elasticsearch-head.git
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ cd elasticsearch-head/
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo npm install
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ nohup npm run start &
+[ec2-user@ip-xxx-xxx-xxx-xxx ES-Tutorial-2]$ ./tuto2 2
 
 ```
+
 
 ### HQ Plugin
 * 클러스터의 노드나 상세 상태정보 값을 모니터링 할 수 있는 플러그인
@@ -61,33 +48,24 @@ ElasticSearch 두 번째 튜토리얼을 기술합니다.
 * 5000 포트로 실행됨
 
 ```bash
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install git
+[ec2-user@ip-xxx-xxx-xxx-xxx ES-Tutorial-2]$ ./tuto2 3
 
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install bzip2 epel-release
+[ec2-user@ip-xxx-xxx-xxx-xxx ES-Tutorial-2]$ ./tuto2 4
 
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ cd /usr/local/
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo git clone https://github.com/ElasticHQ/elasticsearch-HQ.git
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ cd elasticsearch-HQ/
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install python34 python34-pip
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo pip3 install -r requirements.txt
-
-[ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo nohup python3 application.py &
 ```
 
 ## Smoke Test
 
 ### Head Plugin
 
-* Web Browser 에 http://{Head Plugin 설치한 장비의 FQDN}:9100/index.html?base_uri=http://{ES Cluster FQDN}:9200 실행
+* Web Browser 에 [http://{Head Plugin 설치한 장비의 FQDN}:9100/index.html?base_uri=http://{ES Cluster FQDN}:9200 실행](http://HeadPluginFQDN:9100/index.html?base_uri=http://ESClusterFQDN:9200)
 
 ![Optional Text](image/head.png)
 
+
 ### HQ Plugin
 * Web Browser 에 http://{FQDN}:5000 실행
+* Web Browser 에 [http://{HQ Plugin 설치한 장비의 FQDN}:5000 실행](http://HQPluginFQDN:5000)
 
 ![Optional Text](image/hq.png)
 
