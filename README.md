@@ -64,7 +64,6 @@ ElasticSearch 두 번째 튜토리얼을 기술합니다.
 
 
 ### HQ Plugin
-* Web Browser 에 http://{FQDN}:5000 실행
 * Web Browser 에 [http://{HQ Plugin 설치한 장비의 FQDN}:5000 실행](http://HQPluginFQDN:5000)
 
 ![Optional Text](image/hq.png)
