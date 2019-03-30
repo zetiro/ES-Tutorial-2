@@ -8,6 +8,8 @@ ElasticSearch 두 번째 튜토리얼을 기술합니다.
 
 이 튜토리얼에서는 rpm 파일을 이용하여 실습합니다.
 
+Master 1번 장비에서 실습합니다.
+
 ```bash
 [ec2-user@ip-xxx-xxx-xxx-xxx ~]$ sudo yum -y install git
 
